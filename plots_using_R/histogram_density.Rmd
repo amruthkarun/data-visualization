@@ -1,0 +1,28 @@
+---
+title: "Lab02-Data_Visualization"
+author: "Amruth Karun M V"
+date: "29/01/2022"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+## Including Plots
+
+```{r echo=FALSE}
+library(tidyverse)
+ggplot(data = mpg,aes(x=hwy)) + geom_histogram(color="red",fill='orange',bins = 5, linetype="dashed")
+```
+```{r echo=FALSE}
+data("mtcars")
+head(mtcars)
+ggplot(data = mtcars,aes(x=drat)) + geom_histogram(color="red",fill='orange',bins = 7, linetype="dashed")
+```
+
+
+```{r echo=FALSE}
+ggplot(data = mtcars,aes(x=vs)) + geom_density(color="blue",fill='cyan')
+```
